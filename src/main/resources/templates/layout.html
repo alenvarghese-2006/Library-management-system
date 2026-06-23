@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom Style Sheet -->
     <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/style-dark.css}">
     <!-- Global JS -->
     <script th:src="@{/js/app.js}" defer></script>
 </head>
@@ -20,7 +21,7 @@
     <aside id="sidebar">
         <div class="brand">
             <i class="bi bi-book-half"></i>
-            <span>Apex Library</span>
+            <span>Chris Library</span>
         </div>
         
         <ul class="nav-menu">
@@ -96,9 +97,8 @@
             <div th:replace="${content}"></div>
         </main>
     </div>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </div>
-
-<!-- Bootstrap Bundle JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 // Global Library Management UI Helper
 
-document.addEventListener("DOMContentLoaded", () => {
+function initApp() {
     // 1. Initialize Theme (Classic OS Blue vs DEC Amber OS)
-    const currentTheme = localStorage.getItem("theme") || "light";
+    const currentTheme = localStorage.getItem("theme") || "dark";
     document.documentElement.setAttribute("data-theme", currentTheme);
     updateThemeToggleIcon(currentTheme);
 
@@ -49,7 +49,13 @@ document.addEventListener("DOMContentLoaded", () => {
         toastContainer.style.gap = "10px";
         document.body.appendChild(toastContainer);
     }
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initApp);
+} else {
+    initApp();
+}
 
 // Update theme toggle icon representation
 function updateThemeToggleIcon(theme) {

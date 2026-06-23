@@ -1,6 +1,6 @@
 // Students Page Javascript Controller
 
-document.addEventListener("DOMContentLoaded", () => {
+function initStudents() {
     const searchInput = document.getElementById("student-search-input");
     const studentsTableBody = document.getElementById("students-table-body");
 
@@ -265,4 +265,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial binding
     bindActionButtons();
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initStudents);
+} else {
+    initStudents();
+}

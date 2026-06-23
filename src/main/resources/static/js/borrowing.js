@@ -1,6 +1,6 @@
 // Borrowing Page Javascript Controller
 
-document.addEventListener("DOMContentLoaded", () => {
+function initBorrowing() {
     const activeBorrowsBody = document.getElementById("active-borrows-body");
     const historyBorrowsBody = document.getElementById("history-borrows-body");
     const issueForm = document.getElementById("issue-book-form");
@@ -314,4 +314,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     })();
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBorrowing);
+} else {
+    initBorrowing();
+}

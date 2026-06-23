@@ -1,0 +1,45 @@
+/* Dark Theme Overrides */
+[data-theme="dark"] {
+    --bg-desktop: #0a0a0a; /* nearly black */
+    --bg-window: #1a1a1a;
+    --bg-content: #2a2a2a;
+    --color-white: #e0e0e0;
+    --color-black: #f0f0f0;
+    --color-blue: #d75f00; /* amber accent */
+    --color-gray: #555555;
+    --color-light-gray: #333333;
+}
+
+/* Adjust auth container background for dark mode */
+[data-theme="dark"] .auth-container {
+    background-color: var(--bg-desktop);
+}
+
+/* Adjust sidebar brand background */
+[data-theme="dark"] #sidebar .brand {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+/* Adjust cards background */
+[data-theme="dark"] .glass-panel {
+    background-color: var(--bg-window);
+    color: var(--color-white);
+}
+
+/* Adjust table headers */
+[data-theme="dark"] .custom-table th {
+    background-color: var(--bg-window);
+    color: var(--color-white);
+}
+
+/* Adjust button colors for dark mode */
+[data-theme="dark"] .btn-primary {
+    background-color: var(--color-blue);
+    color: var(--color-white) !important;
+}
+[data-theme="dark"] .btn {
+    background: var(--bg-window);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}

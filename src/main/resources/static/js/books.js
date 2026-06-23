@@ -1,6 +1,6 @@
 // Books Page Javascript Controller
 
-document.addEventListener("DOMContentLoaded", () => {
+function initBooks() {
     const searchInput = document.getElementById("book-search-input");
     const categoryFilter = document.getElementById("book-category-filter");
     const booksTableBody = document.getElementById("books-table-body");
@@ -231,4 +231,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial binding on static rendering
     bindActionButtons();
-});
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initBooks);
+} else {
+    initBooks();
+}
