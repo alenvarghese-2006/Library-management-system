@@ -1,4 +1,4 @@
-# 🏛️ SFG library
+book rockstar
 
 A production-ready Full-Stack Library Management System built with **Spring Boot 3**, **PostgreSQL / H2**, and **Thymeleaf**. Designed with a classic 90s Desktop Operating System visual aesthetic (following the Retro-OS UI Kit styleguide).
 
